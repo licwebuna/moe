@@ -1,0 +1,218 @@
+@outter_shadow2: #CCC;
+@outter_shadow1: #DDD;
+@border_color: #FFF;
+
+@top_gradient: #FFF;
+@bottom_gradient: #EEE;
+
+// ------------------------------------------------------------
+#indicador_ajax {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height:15px;
+    padding: 5px 15px 5px 15px;
+}
+
+#indicador_ajax {
+    border-radius: 0px 4px 0px 0px;
+    -moz-border-radius: 0px 4px 0px 0px;
+    -webkit-border-radius: 0px 4px 0px 0px;
+
+    box-shadow: 0px 0px 2px 0px #000000;
+    -moz-box-shadow: 0px 0px 2px 0px #000000;
+    -webkit-box-shadow: 0px 0px 2px 0px #000000;
+}
+// ------------------------------------------------------------
+.ui-botton-submit{ 
+ -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  
+    -webkit-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s, box-shadow linear 0.2s;
+    transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s, box-shadow linear 0.2s;
+}
+.ui-botton-submit:focus {
+    outline: 0;
+    border-color: rgba(82, 168, 236, 0.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.ui-botton-submit[disabled]{
+    background-color: #F5F5F5;
+    border-color: #DDDDDD;
+    cursor: not-allowed;
+    background-image: none;
+    opacity: 0.35;
+    -webkit-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s;
+    -moz-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s;
+    -ms-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s;
+    -o-transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s;
+    transition: border-color linear 0.2s, opacity linear 0.2s,border linear 0.2s;
+}
+input[type="text"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input {
+    margin: 0px;    
+}
+.ui-tabs .ui-tabs-nav li a {
+    line-height: 20px;
+}
+// ------------------------------------------------------------
+label.error{
+    color: rgba(237, 16, 38, 0.8);
+    font-style: italic;
+    margin-left: 10px;
+}
+
+input.error{
+    border-color: rgba(237, 16, 38, 0.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(237, 16, 38, 0.8);
+    -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(237, 16, 38, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(237, 16, 38, 0.8);
+
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+input.valid{
+    -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+    -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+// ------------------------------------------------------------
+#login{
+    margin-top: 100px;
+    padding: 10px;
+    display: inline-block;
+    border: solid #FFF 1px;
+    background: #FAFAFA;
+}
+#login table{
+    margin: 0px;
+}
+#login table th, #login table td{
+    padding: 2px 0px;
+}
+#login table td{
+    border: none;
+}
+#login .etiqueta{
+    text-align: right;
+    vertical-align: middle;
+    padding-right: 5px; 
+}
+#login .titulo{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#login .boton_login{
+    float: right;
+    margin: 8px 0px 0px 0px;
+}
+
+// FX
+#login{
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px @outter_shadow1, 0px 0px 20px 0px @outter_shadow2;
+    
+    background-image: linear-gradient(bottom, @bottom_gradient 0%, @top_gradient 100%);
+    background-image: -o-linear-gradient(bottom, @bottom_gradient 0%, @top_gradient 100%);
+    background-image: -moz-linear-gradient(bottom, @bottom_gradient 0%, @top_gradient 100%);
+    background-image: -webkit-linear-gradient(bottom, @bottom_gradient 0%, @top_gradient 100%);
+    background-image: -ms-linear-gradient(bottom, @bottom_gradient 0%, @top_gradient 100%);
+    
+    background-image: -webkit-gradient(
+        linear,
+    	left bottom,
+    	left top,
+    	color-stop(0, @bottom_gradient),
+    	color-stop(1, @top_gradient)
+    );
+}
+// ------------------------------------------------------------
+
+#mensajes_notificador{
+    display: none;
+}
+.notificacion {
+    border:none;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    display: inline-block;
+}
+
+.notificacion .contenedor {
+    word-break: break-all;
+    
+    box-shadow: 0px 0px 0px 1px @outter_shadow1, 0px 0px 20px 0px @outter_shadow2;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+// ------------------------------------------------------------
+.clear {
+    clear: both;
+}
+.mt{
+    margin-top: 10px;   
+}
+.mb{
+    margin-bottom: 10px;   
+}
+.pt{
+    padding-top: 10px;   
+}
+.pb{
+    padding-bottom: 10px;   
+}
+.der{
+    float: right;
+    margin: 0px 0px 0px 4px;
+}
+.izq{
+    float: left;
+    margin: 0px 4px 0px 0px;
+}
+.w150{
+    width:150px;   
+}
+.w300{
+    width:300px;   
+}
+.w450{
+    width:450px;   
+}
+.w600{
+    width:600px;   
+}
+
+.h150{
+    height:150px;
+}
+.h300{
+    height:300px;
+}
+.h450{
+    height:450px;
+}
+.h600{
+    height:600px;
+}

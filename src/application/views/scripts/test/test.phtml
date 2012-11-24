@@ -1,0 +1,371 @@
+<div class="tab">
+    <ul>
+        <li><a href="#test_core_ajax"> Test Core Ajax - Procesador </a></li>
+        <li><a href="#test_validadores"> Test Validadores </a></li>
+        <li><a href="#test_autoformato"> Test Autoformato </a></li>
+        <li><a href="#test_mascaras"> Test Mascaras </a></li>
+    </ul>
+    <!-- ------------------------------------------------------------------- -->
+    <div id="test_core_ajax">
+        <div class="izq">
+            <div id="ejemplo"></div>
+            <div id="ejemplo2"></div>
+        </div>
+
+        <br style="clear: both;"/>   
+
+        <div class="der">
+            <form action="test/ejemplo" class="ajax">
+                <input type="submit" value="Grupo 0 (Form)"/> 
+            </form>
+
+            <button onmousedown="$('#ejemplo').moeAjax('test/ejemplo'); return false;">Grupo 1 (Append)</button>
+            <button onmousedown="$('#ejemplo').moeAjax('test/ejemplo'); return false;">Grupo 1.2 (Append)</button>
+            <br/>
+            <button onmousedown="$('#ejemplo2').moeAjax('test/ejemplo'); return false;">Grupo 2 (Append)</button>
+            <button onmousedown="$('#ejemplo2').moeAjax('test/ejemplo'); return false;">Grupo 2.1 (Append)</button>
+            <br/>
+            <button onmousedown="$.moeAjax('test/ejemplo',null,function(dom,conf,data){alert(data);}); return false;">Grupo 3 (Sin Append)</button>
+            <br/>
+            <button onmousedown="$('#content').moeAjax('test/test');">Grupo 4 (Padre)</button>
+        </div>
+        <br style="clear: both;"/>   
+    </div>
+    <!-- ------------------------------------------------------------------- -->
+    <div id="test_validadores">
+        <form class="ajax">
+            <div class="acordion" data-auto="false">
+                <h3><a href="#">Validadores de Generales</a></h3>
+                <div>
+                    <div id="validador_requerido"></div>
+                </div>
+                <h3><a href="#">Validadores de Números</a></h3>
+                <div>
+                    <div id="validador_digitos"></div>
+                    <br/>
+                    <div id="validador_numero"></div>
+                    <br/>
+                    <div id="validador_numero_min"></div>
+                    <br/>
+                    <div id="validador_numero_max"></div>
+                    <br/>
+                    <div id="validador_numero_rango"></div>
+                    <br/>
+                    <div id="validador_colon"></div>
+                    <br/>
+                    <div id="validador_dolar"></div>
+                    <br/>
+                    <div id="validador_porcentaje"></div>
+                </div>
+                <h3><a href="#">Validadores de Texto</a></h3>
+                <div>
+                    <div id="validador_texto_min"></div>
+                    <br/>
+                    <div id="validador_texto_max"></div>
+                    <br/>
+                    <div id="validador_texto_rango"></div>
+                </div>
+                <h3><a href="#">Validadores de Fecha</a></h3>
+                <div>
+                    <div id="validador_fecha"></div>
+                    <br/>
+                    <div id="validador_hora"></div>
+                    <br/>
+                    <div id="validador_fechahora"></div>
+                    <br/>
+                    <div id="validador_fechapatron"></div>
+                </div>
+                <h3><a href="#">Validadores de Email</a></h3>
+                <div>
+                    <div id="validador_email"></div>
+                </div>
+                <h3><a href="#">Validadores de Url</a></h3>
+                <div>
+                    <div id="validador_url"></div>
+                </div>
+                <h3><a href="#">Validadores de Archivos</a></h3>
+                <div>
+                    <div id="validador_archivos"></div>
+                </div>
+                <h3><a href="#">Validadores Tarjeta de Crédito</a></h3>
+                <div>
+                    <div id="validador_credito"></div>
+                </div>
+                <h3><a href="#">Validadores Igualdad</a></h3>
+                <div>
+                    <div id="validador_igualdad"/>
+                </div>
+                <h3><a href="#">Validadores Remotos</a></h3>
+                <div>
+                    <div id="validador_remoto"/>
+                </div>
+            </div>
+            <br/>
+            <input class="der" type="submit" value="Submit"/>
+        </form>
+    </div>
+    <!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>< -->
+    <div id="test_autoformato">
+        <form>
+            <div id="autoformato_digitos"></div>
+            <br/>
+            <div id="autoformato_numero"></div>
+            <br/>
+            <div id="autoformato_colon"></div>
+            <br/>
+            <div id="autoformato_dolar"></div>
+            <br/>
+            <div id="autoformato_porcentaje"></div>
+            <br/>
+            <div id="autoformato_signo"></div>
+            <br/>
+            <div id="autoformato_decimal"></div>
+        </form>
+    </div>
+    <!-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>< -->
+    <div id="test_mascaras">
+        <form>
+            <div id="mascara_generica"></div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    require(["jquery", "js/test.js", "js/impl/procesadores/auto_formato"], function($, test){
+        
+        test.demoValidador({
+            id : "#validador_requerido",
+            titulo : "Campos Requeridos",
+            descripcion : "Requerido",
+            ejemplo : "<input data-requerido />"
+        });
+        
+        // ---------------------------------------------------------------------
+        
+        test.demoValidador({
+            id : "#validador_digitos",
+            titulo : "Solo Dígitos",
+            descripcion : "Números Positivos",
+            ejemplo : "<input data-digito />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_numero",
+            titulo : "Solo Números",
+            descripcion : "Números Positivos, Números Negativos y Decimales",
+            ejemplo : "<input data-numero />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_numero_min",
+            titulo : "Solo Números Mayores a 5",
+            descripcion : "Números Positivos y Decimales",
+            ejemplo : "<input data-min='5' />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_numero_max",
+            titulo : "Solo Números Menores a 10",
+            descripcion : "Números Negativos y Decimales",
+            ejemplo : "<input data-max='10' />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_numero_rango",
+            titulo : "Solo Números Mayores a 5,4 y Menores a 10",
+            descripcion : "Rango y Decimales",
+            ejemplo : "<input data-rango='5,4&9000' />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_colon",
+            titulo : "Solo Montos en Colones",
+            descripcion : "Colones",
+            ejemplo : "<input data-colon/>"
+        });
+        
+        test.demoValidador({
+            id : "#validador_dolar",
+            titulo : "Solo Montos en Dolares",
+            descripcion : "Dolares",
+            ejemplo : "<input data-dolar/>"
+        });
+        
+        test.demoValidador({
+            id : "#validador_porcentaje",
+            titulo : "Solo Porcentajes",
+            descripcion : "Porcentajes",
+            ejemplo : "<input data-porcentaje/>"
+        });
+        
+        // ---------------------------------------------------------------------
+        
+        test.demoValidador({
+            id : "#validador_texto_min",
+            titulo : "Textos Mayores 5",
+            descripcion : "Tamaño Texto",
+            ejemplo : "<input data-minl='5' />"
+        });
+
+        test.demoValidador({
+            id : "#validador_texto_max",
+            titulo : "Textos Menores a 10",
+            descripcion : "Tamaño Texto",
+            ejemplo : "<input data-maxl='10' />"
+        });
+
+        test.demoValidador({
+            id : "#validador_texto_rango",
+            titulo : "Textos Mayores a 5 y Menores a 10",
+            descripcion : "Rango Texto",
+            ejemplo : "<input data-rangol='5&10' />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_fecha",
+            titulo : "Fecha",
+            descripcion : "Fecha",
+            ejemplo : "<input data-fecha />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_hora",
+            titulo : "Hora",
+            descripcion : "Hora",
+            ejemplo : "<input data-hora />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_fechahora",
+            titulo : "Fecha Hora",
+            descripcion : "Fecha Hora",
+            ejemplo : "<input data-fechahora />"
+        });
+        
+        test.demoValidador({
+            id : "#validador_fechapatron",
+            titulo : "Fecha Hora Patron",
+            descripcion : "Fecha Hora Patron",
+            ejemplo : "<input data-fechapatron='hh:mm&30:00' />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_email",
+            titulo : "Email",
+            descripcion : "Email",
+            ejemplo : "<input data-email />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_url",
+            titulo : "Url",
+            descripcion : "Url",
+            ejemplo : "<input data-url />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_archivos",
+            titulo : "Archivos",
+            descripcion : "Archivos",
+            ejemplo : "<input data-archivos='jpg,excel' />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_credito",
+            titulo : "Tarjetas de Crédito",
+            descripcion : "Tarjetas de Crédito",
+            ejemplo : "<input data-credito />"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_igualdad",
+            titulo : "Igualdad",
+            descripcion : "Igualdad",
+            ejemplo : "<input data-igualdad='#ejemplo_igualdad' />",
+            extra : "<input id='ejemplo_igualdad' value='Igualdad' /><br/><br/>"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoValidador({
+            id : "#validador_remoto",
+            titulo : "Remoto",
+            descripcion : "Remoto",
+            ejemplo : "<input name='remoto' data-remoto='test/remoto' data-keyup='false' />"
+        });
+        
+        // ---------------------------------------------------------------------
+        
+        test.demoAutoformato({
+            id : "#autoformato_digitos",
+            titulo : "Solo Dígitos",
+            descripcion : "Números Positivos",
+            resultado : "<input data-digito />"
+        });
+        
+        test.demoAutoformato({
+            id : "#autoformato_numero",
+            titulo : "Solo Números",
+            descripcion : "Números Positivos, Números Negativos y Decimales",
+            resultado : "<input data-numero />",
+            ejemplo : "<input data-numero />, <input data-min='5' />, <input data-max='10' />, <input data-rango='5,4&9000' />"
+        });
+        
+        test.demoAutoformato({
+            id : "#autoformato_colon",
+            titulo : "Solo Colones",
+            descripcion : "Montos en Colones",
+            resultado : "<input data-colon />"
+        });
+        
+        test.demoAutoformato({
+            id : "#autoformato_dolar",
+            titulo : "Solo Dolares",
+            descripcion : "Montos en Dolares",
+            resultado : "<input data-dolar />"
+        });
+        
+        test.demoAutoformato({
+            id : "#autoformato_porcentaje",
+            titulo : "Solo Porcentajes",
+            descripcion : "Solo Porcentajes entre 0 y 100",
+            resultado : "<input data-porcentaje />"
+        });
+        
+        test.demoAutoformato({
+            id : "#autoformato_decimal",
+            titulo : "Modifica la Cantidad de Decimales",
+            descripcion : "Número de Decimales",
+            resultado : "<input data-numero data-decimal='5' />",
+            ejemplo : "<input data-digito data-decimal='5'/>, <input data-numero data-decimal='5'/>, <input data-min='5' data-decimal='5'/>, <input data-max='10' data-decimal='5'/>, <input data-rango='5,4&9000' data-decimal='5'/>"
+        });
+        
+        // ---------------------------------------------------------------------
+
+        test.demoMascara({
+            id : "#mascara_generica",
+            titulo : "Define una Mascara Génerica",
+            descripcion : "Permite Definir una Mascara de Acuerdo a un Patrón. <br/><br/>" +
+                "a - Representa un caracter alpha (A-Z,a-z) <br/>" +
+                "9 - Representa un caracter númerico (0-9) <br/>" +
+                "* - Representa un cualquier caracter (A-Z,a-z,0-9) <br/><br/>" +
+                "Ver http://digitalbush.com/projects/masked-input-plugin/",
+            resultado : "<input data-mascara='99/99/9999' />"
+        });
+       
+        $("#test_validadores").moeProcesador("autoformato");
+        $("#test_autoformato").moeProcesador("autoformato");
+        $("#test_mascaras").moeProcesador("mascara");
+    });
+</script>

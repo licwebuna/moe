@@ -1,0 +1,47 @@
+/*
+ * Translated default messages for the jQuery validation plugin.
+ * Locale: ES
+ */
+jQuery.extend(jQuery.validator.messages, {
+  required: "Este campo es obligatorio.",
+  remote: "Por favor, rellena este campo.",
+  email: "Por favor, escribe una dirección de correo válida",
+  url: "Por favor, escribe una URL válida.",
+  date: "Por favor, escribe una fecha válida.",
+  dateISO: "Por favor, escribe una fecha (ISO) válida.",
+  number: "Por favor, escribe un número entero válido.",
+  digits: "Por favor, escribe sólo dígitos.",
+  creditcard: "Por favor, escribe un número de tarjeta válido.",
+  equalTo: "Por favor, escribe el mismo valor de nuevo.",
+  accept: "Por favor, escribe un valor con una extensión aceptada.",
+  maxlength: jQuery.validator.format("Por favor, no escribas más de {0} caracteres."),
+  minlength: jQuery.validator.format("Por favor, no escribas menos de {0} caracteres."),
+  rangelength: jQuery.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+  range: jQuery.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+  max: jQuery.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+  min: jQuery.validator.format("Por favor, escribe un valor mayor o igual a {0}."),
+  // ------------------------------------------------------------------------------
+  data_requerido: "Este campo es obligatorio.",
+  data_digito: "Por favor, escribe sólo dígitos.",
+  data_colon: "Por favor, escribe un mónto en colones válido.",
+  data_dolar: "Por favor, escribe un mónto en dolares válido.",
+  data_porcentaje: "Por favor, escribe un porcentaje válido entre 0 y 100.",
+  data_numero: "Por favor, escribe un número entero válido.",
+  data_max: jQuery.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+  data_min: jQuery.validator.format("Por favor, escribe un valor mayor o igual a {0}."),
+  data_rango: jQuery.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+  data_maxl: jQuery.validator.format("Por favor, no escribas más de {0} caracteres."),
+  data_minl: jQuery.validator.format("Por favor, no escribas menos de {0} caracteres."),
+  data_rangol: jQuery.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+  data_fecha: "Por favor, escribe una fecha válida. Ej 21/10/2009.",
+  data_hora: "Por favor, escribe una hora válida. Ej 10:00:21 am.",
+  data_fechahora: "Por favor, escribe una fecha válida. Ej 21/10/2009 10:00:21 am.",
+  data_fechapatron: "Por favor, escribe una fecha válida. Ej {1}.",
+  data_email: "Por favor, escribe una dirección de correo válida. Ej ejemplo@server.com.",
+  data_url: "Por favor, escribe una URL válida. Ej http://www.ejemplo.com.",
+  data_archivos: "Por favor, escribe un valor con una extensión aceptada. Ej {0}",
+  data_credito: "Por favor, escribe un número de tarjeta válido.",
+  data_igualdad: "Por favor, escribe el mismo valor de nuevo.",
+  data_remoto: "Por favor, rellena este campo.",
+  data_espera_validacion: "Esperando por validación."
+});

@@ -1,0 +1,61 @@
+@bg_color: #FFF;
+@tamano_header: 26px;
+@tamano_footer: 0px;
+@fuente_familia: 'Verdana';
+@fuente_tamano: 11px;
+
+html, body, input, select, textarea, button, table, p,
+tr, td, th, .ui-widget, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button,
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    font: @fuente_tamano @fuente_familia;   
+    font-family: @fuente_familia;
+    font-size: @fuente_tamano;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden; 
+    overflow-y: hidden;
+    overflow-z: hidden;
+    background: @bg_color;
+}  
+
+#head {
+    top: 0px;
+    height: @tamano_header;
+    padding: 1px;
+    border-bottom: 1px solid #DDD;
+
+    left:0px;
+    right: 0px;
+    position: absolute;
+    z-index: 99999;
+}
+
+#main {
+    top: @tamano_header;
+    bottom: @tamano_footer;
+
+    left:0px;
+    right: 0px;
+    position: absolute;
+}
+
+#main #content{
+    overflow: auto;
+    left:0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+#foot {
+    bottom: 0px;
+    height: @tamano_footer;
+
+    left:0px;
+    right: 0px;
+    position: absolute;
+}

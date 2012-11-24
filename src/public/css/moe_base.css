@@ -1,0 +1,7 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+html,body,input,select,textarea,button,table,p,tr,td,th,.ui-widget,.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button,.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default{font:11px 'Verdana';font-family:'Verdana';font-size:11px;}
+html,body{margin:0px;padding:0px;overflow:hidden;overflow-y:hidden;overflow-z:hidden;background:#ffffff;}
+#head{top:0px;height:26px;padding:1px;border-bottom:1px solid #DDD;left:0px;right:0px;position:absolute;z-index:99999;}
+#main{top:26px;bottom:0px;left:0px;right:0px;position:absolute;}
+#main #content{overflow:auto;left:0px;right:0px;top:0px;bottom:0px;position:absolute;}
+#foot{bottom:0px;height:0px;left:0px;right:0px;position:absolute;}
