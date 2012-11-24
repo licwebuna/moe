@@ -19,15 +19,15 @@ class SecurityController extends Zend_Controller_Plugin_Abstract {
     }
 
     private function ejecutarValidacionUsuarioLoggeado() {
-//        return true;
+        return true;
     }
 
     private function ejecutarValidacionSesionValida() {
-//        return true;
+        return true;
     }
 
     private function ejecutarValidacionConPrivilegios() {
-//        return true;
+        return true;
     }
 
     private function errorAutentificacion(
@@ -42,7 +42,8 @@ class SecurityController extends Zend_Controller_Plugin_Abstract {
 
     private function errorSesionInvalida(
     Zend_Controller_Request_Abstract $request, $contoller, $accion) {
-        MessageUtils::showError("Error de Autentificación:", "Sesión Inválida", "#errores_validacion");
+        MessageUtils::showError("Error de Autentificación:", "Sesión Inválida",
+                "#errores_validacion");
         $this->redireccionarUsuario($request, $contoller, $accion);
     }
 
